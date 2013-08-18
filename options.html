@@ -1,0 +1,64 @@
+<html>
+<head>
+    <title>SeedBoxCo VLC Streamer - Options</title>
+
+    <style>
+        .container {
+            margin: 100px auto;
+            width: 400px;
+        }
+
+        .field { margin: 20px 0; }
+
+        label {
+            color: #121212;
+            cursor: pointer;
+            font-family: arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 2.2;
+        }
+
+        input {
+            border: 1px solid #AAA;
+            border-radius: 5px;
+            padding: 8px;
+            width: 400px;
+        }
+
+        button {
+            cursor: pointer;
+            font-weight: bold;
+            margin: 10px 0;
+            text-align: center;
+            padding: 15px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="field">
+            <label for="seedboxco-username">SeedBoxCo Username</label>
+            <input type="text" id="seedboxco-username" data-default="" />
+        </div>
+
+        <div class="field">
+            <label for="seedboxco-password">SeedBoxCo Password</label>
+            <input type="text" id="seedboxco-password" data-default="" />
+        </div>
+
+        <div class="field">
+            <label for="vlc-player-path">VLC Player Path</label>
+            <input type="text" id="vlc-player-path" data-default="C:/Program Files (x86)/VideoLAN/VLC/vlc.exe" />
+        </div>
+
+        <div id="status"></div>
+
+        <button id="save">Save Options</button>
+    </div>
+</body>
+
+<script src="options.js"></script>
+
+</html>

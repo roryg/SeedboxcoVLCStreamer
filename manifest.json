@@ -1,0 +1,38 @@
+{
+    "manifest_version": 2,
+
+    "name": "SeedBoxCo VLC Streamer",
+    "description": "Easily stream media from the SeedBoxCo file manager in VLC player.",
+    "version": "1.0",
+
+    "permissions": [
+        "http://*.cloud.sn/files/*"
+    ],
+
+    "background": {
+        "page": "background.html"
+    },
+
+    "options_page": "options.html",
+
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+
+    "content_scripts": [{
+        "matches": ["http://*.cloud.sn/files/*"],
+        "css": ["style.css"],
+        "js": ["scripts.js"]
+    }],
+
+    "plugins": [{
+        "path": "simpleGetPlugin/npsimpleGetPlugin.dll",
+        "public": false
+    },{
+        "path": "simpleGetPlugin/libsimpleGetPlugin.so",
+        "public": false
+    },{
+        "path": "simpleGetPlugin/libsimpleGetPlugin64.so",
+        "public": false
+    }]
+}
